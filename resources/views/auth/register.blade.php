@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-Register
+- Register
 @endsection
 
 
@@ -9,16 +9,15 @@ Register
 
 <div class="font-sans text-gray-900 antialiased">
 	<div class="min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 py-12">
-
-		<div>
-			<img src="{{asset('assets/images/logo.png')}}" alt="my-wallet-logo" class="w-12 h-12">
-		</div>
 		
-		<div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+		<div class="w-full sm:max-w-md mt-6 px-6 sm:px-12 py-12 bg-white shadow-md overflow-hidden sm:rounded-lg">
+			<div class="flex items-center justify-center">
+				<span class="text-2xl font-semibold text-gray-700">My Wallet</span>
+			</div>
 			<!-- Validation Errors -->
 
 			@if ($errors->any())
-				<div class="font-medium text-red-600">
+				<div class="font-medium text-red-600 mt-4">
 					Whoops! Corrigez les erreurs suivantes :
 				</div>
 				<div class="mb-6">
@@ -30,7 +29,7 @@ Register
 				</div>
 			@endif
 			
-			<form method="POST" action="{{route('register')}}">
+			<form class="mt-4" method="POST" action="{{route('register')}}">
 
 				@csrf
 				<!-- Name -->
@@ -71,9 +70,9 @@ Register
 					</svg>
 				</div>
 
-				<div class="flex items-center justify-end mt-4">
+				<div class="flex items-center justify-between mt-8">
 					<a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{route('login')}}">
-						Vous avez déja un compte?
+						Déja un compte?
 					</a>
 					<button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">S'enregistrer</button>
 				</div>

@@ -49,7 +49,8 @@
 		<p>Made by <a href="https://github.com/Alkaid-Codeur" class="text-special-500 hover:underline">Alkaid-Codeur</a></p>
 	</footer>
 
-
 	<script src="{{asset('assets/js/scripts.js')}}" async></script>
+
+	@yield('scripts')
 </body>
 </html>

@@ -12,7 +12,7 @@ Route::middleware('guest')->group(function() {
 
 	Route::get('/login', [UserAuthentificationController::class, 'login'])->name('login');
 
-	Route::post('login', [UserAuthentificationController::class, 'authentificate']);
+	Route::post('/login', [UserAuthentificationController::class, 'authentificate']);
 
 });
 
