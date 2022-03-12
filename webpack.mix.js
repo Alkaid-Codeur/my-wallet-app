@@ -11,6 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
+ mix.disableNotifications();
+ mix.disableSuccessNotifications();
+
+
 mix.js('resources/js/app.js', 'public/assets/js')
     .postCss('resources/css/app.css', 'public/assets/css', [
         require("tailwindcss"),

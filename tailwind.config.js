@@ -17,7 +17,10 @@ module.exports = {
 					200: '#4d4d4d',
 					250: '#00ffa3',
 					300: '#239c71',
-					350: '#898989'
+					350: '#898989',
+					400: '#1a1a1a',
+					450: '#777',
+					500: '#17B794',
 				}
 			},
 			keyframes: {
@@ -60,7 +63,7 @@ module.exports = {
 			}
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/forms')],
 	purge: [
 		'./storage/framework/views/*.php',
 		'./resources/**/*.blade.php',

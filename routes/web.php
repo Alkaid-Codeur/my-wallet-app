@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\UserRegisterController;
+use App\Mail\Auth\MailVerification;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +23,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function() {
 	return view('home');
 });
+
+// Authentification 
+
+// Route::get('/register', [UserRegisterController::class, 'create'])->name('register');
+
+Route::get('/test', function() {
+	return view('auth.verify-email');
+});
+
+require 'routes/auth.php';
+
+Route::get('/home', function() {
+	return view('app.home');
+})->middleware(['auth', 'verified']);
+
 
