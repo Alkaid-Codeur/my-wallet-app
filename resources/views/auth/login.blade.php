@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
+@section('title')
+	Connexion
+@endsection
+
 @section('content')
-<div>
+<div class="bg-gray-200 py-20">
 	<div class="flex items-center justify-center h-screen sm:px-6 bg-gray-200">
 		<div class="w-full max-w-sm p-4 bg-white rounded-md shadow-md">
 			<div class="flex items-center justify-center">

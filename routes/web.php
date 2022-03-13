@@ -22,14 +22,14 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function() {
 	return view('home');
-});
+})->name('welcome');
 
 // Authentification 
 
 // Route::get('/register', [UserRegisterController::class, 'create'])->name('register');
 
 Route::get('/test', function() {
-	return view('auth.verify-email');
+	return view('test');
 });
 
 require 'routes/auth.php';

@@ -1,14 +1,14 @@
 @extends('layouts.main')
 
 @section('title')
-- Register
+S'enregistrer
 @endsection
 
 
 @section('content')
 
-<div class="font-sans text-gray-900 antialiased">
-	<div class="min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 py-12">
+<div class="font-sans text-gray-900 antialiased bg-gray-100 py-20">
+	<div class="min-h-screen flex flex-col sm:justify-center items-center bg-gray-100">
 		
 		<div class="w-full sm:max-w-md mt-6 px-6 sm:px-12 py-12 bg-white shadow-md overflow-hidden sm:rounded-lg">
 			<div class="flex items-center justify-center">

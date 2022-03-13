@@ -22,5 +22,7 @@ Route::middleware('auth')->group(function() {
 	Route::get('/email/verify/{id}/{hash}', [MailVerificationController::class, 'verifyEmail'])->name('verification.verify');
 
 	Route::post('/email/verification-notification', [MailVerificationController::class, 'sendVerificationNotification'])->name('verification.send');
+
+	Route::post('/logout', [UserAuthentificationController::class, 'logout'])->name('logout');
 });
 
