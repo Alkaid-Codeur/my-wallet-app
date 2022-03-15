@@ -97,7 +97,7 @@
 							<!-- Menu -->
 							<ul>
 								<li>
-									<a class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-100" href="">Parametres</a>
+									<a class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-100" href="{{route('settings')}}">Parametres</a>
 								</li>
 								<!-- Deconnexion -->
 								<li>

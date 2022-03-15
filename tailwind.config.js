@@ -60,7 +60,10 @@ module.exports = {
 				wiggle: 'wiggle .7s ease-in-out',
 				navdisplay: 'navdisplay 1s ease-in-out',
 				navhide: 'navhide 1s ease-in-out',
-			}
+			},
+			screens: {
+				'sd': '425px',
+			},
 		},
 	},
 	plugins: [require('@tailwindcss/forms')],

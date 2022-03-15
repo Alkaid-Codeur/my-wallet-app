@@ -18,9 +18,9 @@ use App\Models\Accounts;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/test', function () {
+    return view('test');
+});
 
 // Main space : landing page, about, help...
 Route::get('/', function() {

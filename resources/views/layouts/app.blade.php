@@ -14,18 +14,19 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
 	<link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
+	
 	<link rel="shortcut icon" href="{{asset('assets/images/logo.svg')}}" type="image/x-icon">
 	<script src="{{asset('assets/js/app.js')}}" defer></script> 
 </head>
 <body class="font-sans antialiased">
 
-<div class="flex h-screen bg-gray-200 font-roboto">
+<div class="bg-gray-200 font-roboto grid md:grid-cols-4 xl:grid-cols-6 gap-0 grid-flow-row-dense">
 	<x-app.partials.sidebar></x-app.partials.sidebar>
 
-	<div class="flex-1 flex-col overflow-hidden">
+	<div class="col-span-5 lg:col-span-3 xl:col-span-5">
 		<x-app.partials.header :user="$user"></x-app.partials.header>
 		<main>
-			<div class="container mx-auto px-6 py-8">
+			<div class="mx-auto px-6 py-8">
 				@yield('content')
 			</div>
 		</main>
