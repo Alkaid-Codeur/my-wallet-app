@@ -3,7 +3,7 @@
 		<div class="flex items-center justify-between h-16 md:h-20">
 			<div class="flex-shrink-0 mr-4">
 				<a class="block" aria-label="Cruip" href="{{route('welcome')}}">
-					<x-logo></x-logo>
+					<x-elements.logo></x-elements.logo>
 				</a>
 			</div>
 			<nav class="flex flex-grow">

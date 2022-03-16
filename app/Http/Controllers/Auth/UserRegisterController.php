@@ -5,16 +5,21 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use Illuminate\Auth\Events\Registered;
+use App\Models\AccountType;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 
 class UserRegisterController extends Controller
 {
     public function register() 
 	{
-		return view('auth.register');
+		$currencies = DB::table('currencies')->orderBy('name')->get();
+		return view('auth.register', [
+			'currencies' => $currencies
+		]);
 	}
 
 	public function userRegistration(Request $request)
@@ -29,6 +34,19 @@ class UserRegisterController extends Controller
 			'name' => $request->name,
 			'email' => $request->email,
 			'password' => Hash::make($request->password),
+		]);
+
+		$setting = $user->settings()->create([
+			'currency_id' => $request->currency
+		]);
+
+		$type = AccountType::where('value', 'General')->first();
+
+		$account = $user->accounts()->create([
+			'name' => 'Cash',
+			'balance' => 0,
+			'currency_id' => $request->currency,
+			'type_id' => $type->id,
 		]);
 		
 		event(New Registered($user));

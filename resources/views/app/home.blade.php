@@ -10,10 +10,11 @@
 		</svg>
 	</div>
 	<div class="relative">
-		<h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1">Salut ! {{Auth::user()->name}} 👋</h1>
+		<h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1">Salut ! {{$user->name}} 👋</h1>
 		<p class="text-lg text-gray-600">Welcome ! N'oubliez pas d'enregistrer vos opérations financières. 🤫</p>
 	</div>
 </div>
 
-	
+<x-app.partials.dash-accounts :user="$user" :totalByCurrency="$totalByCurrency"> </x-app.partials.dash-accounts>
+
 @endsection

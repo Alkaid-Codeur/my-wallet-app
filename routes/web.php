@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Auth\UserRegisterController;
+use Illuminate\Support\Facades\DB;
 use App\Mail\Auth\MailVerification;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Auth\UserRegisterController;
+use App\Models\Accounts;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,26 +18,21 @@ use Illuminate\Support\Facades\Storage;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/test', function () {
+    return view('test');
+});
 
+// Main space : landing page, about, help...
 Route::get('/', function() {
 	return view('home');
 })->name('welcome');
 
+
+
 // Authentification 
-
-// Route::get('/register', [UserRegisterController::class, 'create'])->name('register');
-
-Route::get('/test', function() {
-	return view('test');
-});
 
 require 'routes/auth.php';
 
-Route::get('/home', function() {
-	return view('app.home');
-})->middleware(['auth', 'verified']);
-
+// App interface..
+require 'routes/app.php';
 

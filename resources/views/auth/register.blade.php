@@ -70,6 +70,15 @@ S'enregistrer
 					</svg>
 				</div>
 
+				<div class="mt-4 ">
+					<label class="class="block font-medium text-base text-gray-700" for="currency">Devise par défaut :</label>
+					<select class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full" id="currency" name="currency">
+						@foreach ($currencies as $currency)
+							<option value="{{$currency->id}}">{{$currency->code}} - {{$currency->name}}</option>
+						@endforeach
+					</select>
+				</div>
+
 				<div class="flex items-center justify-between mt-8">
 					<a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{route('login')}}">
 						Déja un compte?
