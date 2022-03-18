@@ -38,7 +38,7 @@
 						<path d="M11 5C11 3.89543 11.8954 3 13 3H15C16.1046 3 17 3.89543 17 5V7C17 8.10457 16.1046 9 15 9H13C11.8954 9 11 8.10457 11 7V5Z" fill="currentColor"></path>
 						<path d="M11 13C11 11.8954 11.8954 11 13 11H15C16.1046 11 17 11.8954 17 13V15C17 16.1046 16.1046 17 15 17H13C11.8954 17 11 16.1046 11 15V13Z" fill="currentColor"></path>
 					</svg>
-					<span class="mx-4">Mes comptes</span>
+					<span class="mx-4">Compte</span>
 				</button>
 				<ul x-show="open" x-transition:enter="transition ease-out duration-200"
 					x-transition:enter-start="transform opacity-0 scale-95"
@@ -52,7 +52,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-100 bg-gray-600 hover:bg-gray-400">
+						<a href="{{route('account.create')}}" class="block px-4 py-2 text-sm text-gray-100 bg-gray-600 hover:bg-gray-400">
 							Ajouter un compte
 						</a>
 					</li>

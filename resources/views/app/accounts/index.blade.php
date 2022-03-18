@@ -4,10 +4,26 @@
 	Mes comptes
 @endsection
 
+
 @section('content')
+	@if(session('delete'))
+		@php
+			$message = session('delete')
+		@endphp
+		<x-elements.alerts.success :message="$message"></x-elements.alerts.success>
+	@endif
+
+	@if(session('createdSuccess'))
+		@php
+			$message = session('createdSuccess')
+		@endphp
+		<x-elements.alerts.success :message="$message"></x-elements.alerts.success>
+	@endif
+	
 	@php
 		$message = "Liste de mes comptes :"
 	@endphp
+
 	<x-elements.page-info :message="$message" ></x-elements.page-info>
 
 	@if ($accounts->count() > 0)

@@ -22,7 +22,7 @@
 </head>
 <body class="font-sans antialiased dark:bg-gray-900" >
 	
-	<div class="bg-gray-200 dark:bg-slate-900 font-roboto grid md:grid-cols-4 xl:grid-cols-6 gap-0 grid-flow-row-dense">
+	<div class="bg-gray-200 dark:bg-slate-900 font-roboto grid md:grid-cols-4 xl:grid-cols-6 gap-0 grid-flow-row-dense h-screen">
 		<x-app.partials.sidebar></x-app.partials.sidebar>
 
 		<div class="col-span-full lg:col-span-3 xl:col-span-5">
